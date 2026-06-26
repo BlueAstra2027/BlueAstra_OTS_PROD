@@ -227,7 +227,8 @@ body {
 }
 
 .btn-settings,
-.btn-sync {
+.btn-sync,
+.btn-sync-config {
     flex: 1;
     padding: 10px 12px;
     background: #ffffff;
@@ -241,7 +242,8 @@ body {
 }
 
 .btn-settings:hover,
-.btn-sync:hover {
+.btn-sync:hover,
+.btn-sync-config:hover {
     background: #E74C3C;
     color: white;
     border-color: #E74C3C;
@@ -631,6 +633,11 @@ body {
     max-width: 800px;
 }
 
+.sync-config-modal {
+    max-width: 700px;
+    max-height: 85vh;
+}
+
 @keyframes slideUp {
     from {
         transform: translateY(50px);
@@ -748,6 +755,29 @@ body {
     cursor: pointer;
     color: white;
     font-weight: bold;
+}
+
+/* Sync Configuration */
+
+.sync-config-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: #f9f9f9;
+    border-left: 4px solid #00BCD4;
+    border-radius: 4px;
+}
+
+.sync-config-section h4 {
+    margin: 0 0 15px 0;
+    color: #E74C3C;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.sync-config-section .form-group:last-child {
+    margin-bottom: 0;
 }
 
 .recipient-tag-remove:hover {

@@ -274,12 +274,12 @@ class SMTPProviderModal {
                                     ${field.hint ? `<br><span class="hint">${field.hint}</span>` : ''}
                                 </label>
                                 ${field.type === 'select' ? `
-                                    <select id="${field.name}" required="${field.required}">
+                                    <select id="${field.name}">
                                         <option value="">Select ${field.label}</option>
                                         ${field.options.map(opt => `<option value="${opt.value}">${opt.label}</option>`).join('')}
                                     </select>
                                 ` : `
-                                    <input type="${field.type}" id="${field.name}" placeholder="Enter ${field.label.toLowerCase()}" required="${field.required}">
+                                    <input type="${field.type}" id="${field.name}" placeholder="Enter ${field.label.toLowerCase()}">
                                 `}
                             </div>
                         `).join('')}

@@ -107,6 +107,20 @@ class EmailClient {
             const input = document.getElementById(id);
             input.addEventListener('blur', () => this.parseRecipients(id));
         });
+
+        // Sync configuration
+        if (document.getElementById('btnSyncConfig')) {
+            document.getElementById('btnSyncConfig').addEventListener('click', () => this.openSyncConfigModal());
+        }
+        if (document.getElementById('btnCloseSyncConfig')) {
+            document.getElementById('btnCloseSyncConfig').addEventListener('click', () => this.closeSyncConfigModal());
+        }
+        if (document.getElementById('btnCancelSyncConfig')) {
+            document.getElementById('btnCancelSyncConfig').addEventListener('click', () => this.closeSyncConfigModal());
+        }
+        if (document.getElementById('btnSaveSyncConfig')) {
+            document.getElementById('btnSaveSyncConfig').addEventListener('click', () => this.saveSyncConfig());
+        }
     }
 
     async loadConnections() {
@@ -716,6 +730,55 @@ class EmailClient {
 
         localStorage.setItem('emailClientSettings', JSON.stringify(this.settings));
         this.showToast('Settings saved', 'success');
+    }
+
+    openSyncConfigModal() {
+        const modal = document.getElementById('syncConfigModal');
+        if (modal) {
+            modal.classList.add('active');
+            this.loadSyncConfig();
+        }
+    }
+
+    closeSyncConfigModal() {
+        const modal = document.getElementById('syncConfigModal');
+        if (modal) {
+            modal.classList.remove('active');
+        }
+    }
+
+    loadSyncConfig() {
+        const syncConfig = JSON.parse(localStorage.getItem('emailSyncConfig') || '{}');
+
+        document.getElementById('syncUserId').value = syncConfig.userId || '';
+        document.getElementById('syncPassword').value = syncConfig.password || '';
+        document.getElementById('sesAccessKey').value = syncConfig.sesAccessKey || '';
+        document.getElementById('sesSecretKey').value = syncConfig.sesSecretKey || '';
+        document.getElementById('sesRegion').value = syncConfig.sesRegion || '';
+        document.getElementById('postmarkAccountToken').value = syncConfig.postmarkAccountToken || '';
+        document.getElementById('postmarkServerToken').value = syncConfig.postmarkServerToken || '';
+        document.getElementById('mailgunApiKey').value = syncConfig.mailgunApiKey || '';
+        document.getElementById('mailgunDomain').value = syncConfig.mailgunDomain || '';
+        document.getElementById('smtp2goApiKey').value = syncConfig.smtp2goApiKey || '';
+    }
+
+    saveSyncConfig() {
+        const syncConfig = {
+            userId: document.getElementById('syncUserId').value,
+            password: document.getElementById('syncPassword').value,
+            sesAccessKey: document.getElementById('sesAccessKey').value,
+            sesSecretKey: document.getElementById('sesSecretKey').value,
+            sesRegion: document.getElementById('sesRegion').value,
+            postmarkAccountToken: document.getElementById('postmarkAccountToken').value,
+            postmarkServerToken: document.getElementById('postmarkServerToken').value,
+            mailgunApiKey: document.getElementById('mailgunApiKey').value,
+            mailgunDomain: document.getElementById('mailgunDomain').value,
+            smtp2goApiKey: document.getElementById('smtp2goApiKey').value
+        };
+
+        localStorage.setItem('emailSyncConfig', JSON.stringify(syncConfig));
+        this.showToast('Email Sync Configuration saved successfully!', 'success');
+        this.closeSyncConfigModal();
     }
 
     loadSettings() {
