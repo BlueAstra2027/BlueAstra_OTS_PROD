@@ -3,7 +3,7 @@
    ===================================================== */
 
 // Backend URL Configuration
-const BACKEND_URL = 'http://localhost:5001';
+const BACKEND_URL = 'http://localhost:5002';
 
 // Video Provider Configuration
 const videoProviders = {
@@ -205,18 +205,24 @@ async function handleStartMeeting(event) {
     const record = document.getElementById('recordMeeting').checked;
     const providerInfo = videoProviders[provider];
 
-    // Validate required fields
-    if (!title || !provider || !clientName || !clientEmail || !agenda) {
-        showNotification('Please fill in all required fields', 'error');
+    // Validate email (only mandatory field)
+    if (!clientEmail || clientEmail.trim() === '') {
+        showNotification('Client email is required', 'error');
         return;
     }
 
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(clientEmail)) {
+    if (!emailRegex.test(clientEmail.trim())) {
         showNotification('Please enter a valid email address', 'error');
         return;
     }
+
+    // Check if other fields are provided for default values
+    if (!title) title = 'Meeting';
+    if (!provider) provider = 'zoom';
+    if (!clientName) clientName = 'Client';
+    if (!agenda) agenda = 'Meeting discussion';
 
     showNotification(`Starting meeting with ${providerInfo?.name || provider}...`, 'info');
 

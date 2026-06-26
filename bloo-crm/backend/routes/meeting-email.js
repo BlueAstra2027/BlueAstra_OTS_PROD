@@ -13,40 +13,38 @@ const emailService = require('../utils/email-service');
  */
 router.post('/meeting/send-invite', async (req, res) => {
     try {
-        const { meetingTitle, providerName, clientName, clientEmail, agenda, senderEmail, senderName } = req.body;
+        let { meetingTitle, providerName, clientName, clientEmail, agenda, senderEmail, senderName } = req.body;
 
-        // Validate required fields
-        if (!meetingTitle || !providerName || !clientName || !clientEmail || !agenda) {
+        // Validate email (only mandatory field)
+        if (!clientEmail || clientEmail.trim() === '') {
             return res.status(400).json({
                 success: false,
-                error: 'Missing required fields: meetingTitle, providerName, clientName, clientEmail, agenda'
+                error: 'Client email is required'
             });
         }
 
         // Validate email format
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(clientEmail)) {
+        if (!emailRegex.test(clientEmail.trim())) {
             return res.status(400).json({
                 success: false,
                 error: 'Invalid email address format'
             });
         }
 
-        // Validate agenda length
-        if (agenda.trim().length === 0) {
-            return res.status(400).json({
-                success: false,
-                error: 'Agenda cannot be empty'
-            });
-        }
+        // Set defaults for optional fields
+        meetingTitle = meetingTitle?.trim() || 'Meeting';
+        providerName = providerName?.trim() || 'Video Conference';
+        clientName = clientName?.trim() || 'Client';
+        agenda = agenda?.trim() || 'Meeting discussion';
 
         // Send email
         const result = await emailService.sendMeetingInvite({
-            meetingTitle: meetingTitle.trim(),
-            providerName: providerName.trim(),
-            clientName: clientName.trim(),
+            meetingTitle: meetingTitle,
+            providerName: providerName,
+            clientName: clientName,
             clientEmail: clientEmail.trim(),
-            agenda: agenda.trim(),
+            agenda: agenda,
             senderEmail: senderEmail || null,
             senderName: senderName || 'Bloo CRM',
             meetingTime: new Date().toLocaleString()

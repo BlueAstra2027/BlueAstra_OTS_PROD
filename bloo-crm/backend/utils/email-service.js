@@ -58,11 +58,11 @@ class EmailService {
      */
     async sendMeetingInvite(options) {
         try {
-            // Validate required fields
+            // Validate required fields (only email is truly required)
             const { meetingTitle, providerName, clientName, clientEmail, agenda, senderEmail, senderName } = options;
 
-            if (!meetingTitle || !providerName || !clientName || !clientEmail || !agenda) {
-                throw new Error('Missing required meeting details');
+            if (!clientEmail) {
+                throw new Error('Client email is required');
             }
 
             // If in demo mode, use mock send

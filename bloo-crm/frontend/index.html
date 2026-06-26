@@ -1724,12 +1724,12 @@ Mike Johnson,mike@example.com,555-8888,Finance Inc,Qualified,Referral,Referred b
             </div>
             <form onsubmit="handleStartMeeting(event)">
                 <div class="form-group">
-                    <label>Meeting Title</label>
+                    <label>Meeting Title <span style="color: #999; font-size: 0.9em;">(Optional)</span></label>
                     <input type="text" id="meetingTitle" placeholder="e.g., Q4 Financial Review with John Doe">
                 </div>
 
                 <div class="form-group">
-                    <label>Video Provider</label>
+                    <label>Video Provider <span style="color: #999; font-size: 0.9em;">(Optional)</span></label>
                     <select id="meetingProvider">
                         <option value="">Select video provider...</option>
                         <option value="zoom">Zoom</option>
@@ -1743,17 +1743,17 @@ Mike Johnson,mike@example.com,555-8888,Finance Inc,Qualified,Referral,Referred b
 
                 <div class="form-row">
                     <div class="form-group">
-                        <label>Client Name</label>
+                        <label>Client Name <span style="color: #999; font-size: 0.9em;">(Optional)</span></label>
                         <input type="text" id="clientName" placeholder="Client name">
                     </div>
                     <div class="form-group">
-                        <label>Client Email</label>
+                        <label>Client Email <span style="color: #E74C3C; font-weight: bold;">*</span></label>
                         <input type="email" id="clientEmail" placeholder="client@example.com">
                     </div>
                 </div>
 
                 <div class="form-group">
-                    <label>Meeting Agenda</label>
+                    <label>Meeting Agenda <span style="color: #999; font-size: 0.9em;">(Optional)</span></label>
                     <textarea id="meetingAgenda" placeholder="Briefly describe meeting topics..." rows="3"></textarea>
                 </div>
 
