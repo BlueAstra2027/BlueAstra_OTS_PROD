@@ -1,5 +1,6 @@
 /* =====================================================
-   EMAIL CLIENT STYLING
+   EMAIL CLIENT STYLING - RED CRM THEME
+   Red (#E74C3C), Bright Blue (#4A90E2), Yellow (#F1C40F)
    ===================================================== */
 
 * {
@@ -10,8 +11,8 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background: #f5f5f5;
-    color: #333;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
 }
 
 /* =====================================================
@@ -21,7 +22,7 @@ body {
 .email-client-container {
     display: flex;
     height: 100vh;
-    background: white;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
 }
 
 /* =====================================================
@@ -30,75 +31,89 @@ body {
 
 .email-sidebar {
     width: 280px;
-    background: #2c3e50;
-    color: white;
+    background: linear-gradient(180deg, #E74C3C 0%, #c0392b 100%);
+    color: #ffffff;
     display: flex;
     flex-direction: column;
-    border-right: 1px solid #34495e;
+    border-right: 3px solid #F1C40F;
     overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar-header {
     padding: 20px 15px;
-    border-bottom: 1px solid #34495e;
+    border-bottom: 2px solid #F1C40F;
+    background: linear-gradient(180deg, #E74C3C 0%, #c0392b 100%);
 }
 
 .sidebar-header h2 {
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 15px;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .btn-compose {
     width: 100%;
-    padding: 10px 15px;
-    background: #3498db;
-    color: white;
-    border: none;
-    border-radius: 4px;
+    padding: 12px 15px;
+    background: linear-gradient(135deg, #4A90E2 0%, #2e5c99 100%);
+    color: #ffffff;
+    border: 2px solid #F1C40F;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 14px;
-    font-weight: 500;
-    transition: background 0.3s;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .btn-compose:hover {
-    background: #2980b9;
+    background: linear-gradient(135deg, #2e5c99 0%, #4A90E2 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Account Switcher */
 
 .account-switcher {
     padding: 15px;
-    border-bottom: 1px solid #34495e;
+    border-bottom: 2px solid #F1C40F;
     display: flex;
     gap: 8px;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .account-dropdown {
     flex: 1;
-    padding: 8px;
-    background: #34495e;
-    color: white;
-    border: 1px solid #7f8c8d;
-    border-radius: 4px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 2px solid #F1C40F;
+    border-radius: 6px;
     font-size: 13px;
     cursor: pointer;
 }
 
+.account-dropdown:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
 .btn-add-account {
-    width: 35px;
-    height: 35px;
-    background: #27ae60;
-    color: white;
-    border: none;
-    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #4A90E2 0%, #2e5c99 100%);
+    color: #ffffff;
+    border: 2px solid #F1C40F;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 18px;
-    transition: background 0.3s;
+    font-size: 20px;
+    font-weight: bold;
+    transition: all 0.3s;
 }
 
 .btn-add-account:hover {
-    background: #229954;
+    transform: rotate(90deg) scale(1.1);
+    background: linear-gradient(135deg, #2e5c99 0%, #4A90E2 100%);
 }
 
 /* Folder List */
@@ -106,59 +121,63 @@ body {
 .folder-list {
     flex: 1;
     padding: 10px 0;
-    border-bottom: 1px solid #34495e;
+    border-bottom: 2px solid #F1C40F;
 }
 
 .folder-item {
     display: flex;
     align-items: center;
-    padding: 12px 15px;
+    padding: 14px 15px;
     cursor: pointer;
-    transition: background 0.2s;
-    border-left: 3px solid transparent;
+    transition: all 0.3s;
+    border-left: 4px solid transparent;
+    color: #ffffff;
 }
 
 .folder-item:hover {
-    background: #34495e;
+    background: rgba(255, 255, 255, 0.15);
+    border-left-color: #F1C40F;
 }
 
 .folder-item.active {
-    background: #34495e;
-    border-left-color: #3498db;
+    background: rgba(255, 255, 255, 0.2);
+    border-left-color: #F1C40F;
+    font-weight: 600;
 }
 
 .folder-icon {
-    font-size: 16px;
+    font-size: 18px;
     margin-right: 12px;
-    width: 20px;
+    width: 24px;
 }
 
 .folder-name {
     flex: 1;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .folder-count {
-    background: #e74c3c;
-    color: white;
+    background: #F1C40F;
+    color: #E74C3C;
     border-radius: 12px;
-    padding: 2px 8px;
+    padding: 3px 10px;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 /* Labels Section */
 
 .labels-section {
     padding: 15px;
-    border-bottom: 1px solid #34495e;
+    border-bottom: 2px solid #F1C40F;
 }
 
 .labels-section h4 {
     font-size: 12px;
     text-transform: uppercase;
     margin-bottom: 10px;
-    color: #95a5a6;
+    color: #F1C40F;
+    font-weight: 700;
 }
 
 .labels-list {
@@ -167,42 +186,45 @@ body {
 
 .label-tag {
     display: block;
-    padding: 6px 10px;
-    margin-bottom: 5px;
-    background: #34495e;
-    border-left: 3px solid;
-    border-radius: 2px;
+    padding: 8px 12px;
+    margin-bottom: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #4A90E2;
+    border-radius: 3px;
     font-size: 13px;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: all 0.3s;
+    color: #ffffff;
 }
 
 .label-tag:hover {
-    background: #414f5f;
+    background: rgba(255, 255, 255, 0.2);
+    border-left-color: #F1C40F;
 }
 
 .btn-new-label {
     width: 100%;
-    padding: 6px;
+    padding: 8px;
     background: transparent;
-    color: #3498db;
-    border: 1px dashed #3498db;
-    border-radius: 3px;
+    color: #F1C40F;
+    border: 2px dashed #F1C40F;
+    border-radius: 4px;
     font-size: 13px;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .btn-new-label:hover {
-    background: #3498db;
-    color: white;
+    background: #F1C40F;
+    color: #E74C3C;
 }
 
 /* Sidebar Footer */
 
 .sidebar-footer {
     padding: 15px;
-    border-top: 1px solid #34495e;
+    border-top: 2px solid #F1C40F;
     display: flex;
     gap: 10px;
 }
@@ -210,20 +232,22 @@ body {
 .btn-settings,
 .btn-sync {
     flex: 1;
-    padding: 8px 12px;
-    background: #34495e;
-    color: white;
-    border: 1px solid #7f8c8d;
-    border-radius: 4px;
+    padding: 10px 12px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    border: 2px solid #4A90E2;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 13px;
+    font-weight: 600;
     transition: all 0.3s;
 }
 
 .btn-settings:hover,
 .btn-sync:hover {
-    background: #3d5266;
-    border-color: #95a5a6;
+    background: #4A90E2;
+    border-color: #F1C40F;
+    color: #ffffff;
 }
 
 /* =====================================================
@@ -234,18 +258,19 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    background: white;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
 }
 
 /* Top Bar */
 
 .email-topbar {
-    padding: 12px 20px;
-    background: white;
-    border-bottom: 1px solid #ecf0f1;
+    padding: 16px 20px;
+    background: linear-gradient(180deg, rgba(79, 39, 245, 0.1), rgba(74, 144, 226, 0.05));
+    border-bottom: 2px solid #4A90E2;
     display: flex;
     align-items: center;
     gap: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .search-box {
@@ -254,40 +279,47 @@ body {
 
 .search-input {
     width: 100%;
-    padding: 8px 12px;
-    background: #f8f9fa;
-    border: 1px solid #ddd;
-    border-radius: 20px;
+    padding: 10px 16px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #4A90E2;
+    border-radius: 24px;
     font-size: 14px;
+    color: #ffffff;
     outline: none;
     transition: all 0.3s;
 }
 
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
 .search-input:focus {
-    background: white;
-    border-color: #3498db;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #F1C40F;
+    box-shadow: 0 0 10px rgba(241, 196, 15, 0.3);
 }
 
 .topbar-actions {
     display: flex;
-    gap: 8px;
+    gap: 10px;
 }
 
 .btn-icon {
-    width: 35px;
-    height: 35px;
-    background: #f8f9fa;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    width: 40px;
+    height: 40px;
+    background: rgba(74, 144, 226, 0.3);
+    border: 2px solid #4A90E2;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     transition: all 0.3s;
+    color: #ffffff;
 }
 
 .btn-icon:hover {
-    background: #ecf0f1;
-    border-color: #3498db;
+    background: #4A90E2;
+    border-color: #F1C40F;
+    transform: scale(1.05);
 }
 
 /* =====================================================
@@ -298,6 +330,7 @@ body {
     flex: 1;
     display: flex;
     overflow: hidden;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
 }
 
 /* Email List */
@@ -306,19 +339,20 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    border-right: 1px solid #ecf0f1;
+    border-right: 2px solid #4A90E2;
+    background: rgba(0, 0, 0, 0.3);
 }
 
 .email-list-header {
     display: grid;
     grid-template-columns: 40px 150px 1fr 150px;
-    padding: 12px 0;
-    background: #f8f9fa;
-    border-bottom: 1px solid #ecf0f1;
-    font-weight: 600;
+    padding: 14px 0;
+    background: linear-gradient(180deg, rgba(74, 144, 226, 0.2), rgba(74, 144, 226, 0.1));
+    border-bottom: 2px solid #4A90E2;
+    font-weight: 700;
     font-size: 12px;
     text-transform: uppercase;
-    color: #7f8c8d;
+    color: #F1C40F;
 }
 
 .select-all {
@@ -330,7 +364,7 @@ body {
     padding: 0 15px;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    #ffffff-space: nowrap;
 }
 
 .email-list {
@@ -341,23 +375,27 @@ body {
 .email-item {
     display: grid;
     grid-template-columns: 40px 150px 1fr 150px;
-    padding: 12px 0;
-    border-bottom: 1px solid #ecf0f1;
+    padding: 14px 0;
+    border-bottom: 1px solid rgba(74, 144, 226, 0.3);
     align-items: center;
     cursor: pointer;
-    transition: background 0.2s;
+    transition: all 0.3s;
+    color: #ffffff;
 }
 
 .email-item:hover {
-    background: #f8f9fa;
+    background: rgba(74, 144, 226, 0.15);
+    border-left: 4px solid #F1C40F;
 }
 
 .email-item.active {
-    background: #e3f2fd;
+    background: linear-gradient(90deg, rgba(231, 76, 60, 0.3), rgba(74, 144, 226, 0.2));
+    border-left: 4px solid #E74C3C;
 }
 
 .email-item.unread {
-    font-weight: 600;
+    font-weight: 700;
+    background: rgba(241, 196, 15, 0.1);
 }
 
 .email-item-checkbox {
@@ -369,24 +407,24 @@ body {
     padding: 0 15px;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    #ffffff-space: nowrap;
 }
 
 .email-item-subject {
     padding: 0 15px;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    #ffffff-space: nowrap;
 }
 
 .email-item-date {
     padding: 0 15px;
     text-align: right;
-    font-size: 13px;
-    color: #7f8c8d;
+    font-size: 12px;
+    color: #4A90E2;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    #ffffff-space: nowrap;
 }
 
 /* Email Detail View */
@@ -395,146 +433,156 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    background: white;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
 }
 
 .detail-header {
-    padding: 15px 20px;
-    background: #f8f9fa;
-    border-bottom: 1px solid #ecf0f1;
+    padding: 18px 20px;
+    background: linear-gradient(180deg, rgba(74, 144, 226, 0.2), rgba(74, 144, 226, 0.1));
+    border-bottom: 2px solid #4A90E2;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .btn-back {
-    padding: 8px 12px;
-    background: transparent;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 10px 14px;
+    background: rgba(74, 144, 226, 0.3);
+    border: 2px solid #4A90E2;
+    border-radius: 6px;
     cursor: pointer;
     font-size: 14px;
+    color: #ffffff;
+    font-weight: 600;
     transition: all 0.3s;
 }
 
 .btn-back:hover {
-    background: #ecf0f1;
+    background: #4A90E2;
+    border-color: #F1C40F;
+    color: #ffffff;
 }
 
 .detail-actions {
     display: flex;
-    gap: 8px;
+    gap: 10px;
 }
 
 .detail-content {
     flex: 1;
     overflow-y: auto;
-    padding: 20px;
+    padding: 24px;
+    color: #ffffff;
 }
 
 .email-headers {
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     padding-bottom: 20px;
-    border-bottom: 1px solid #ecf0f1;
+    border-bottom: 2px solid #4A90E2;
 }
 
 .header-row {
     display: grid;
-    grid-template-columns: 80px 1fr;
-    margin-bottom: 10px;
+    grid-template-columns: 100px 1fr;
+    margin-bottom: 12px;
     font-size: 14px;
 }
 
 .header-label {
-    font-weight: 600;
-    color: #7f8c8d;
+    font-weight: 700;
+    color: #F1C40F;
 }
 
 .header-value {
-    color: #2c3e50;
+    color: #fff;
     word-break: break-word;
 }
 
 .header-subject-detail {
-    font-size: 18px;
-    font-weight: 600;
-    color: #2c3e50;
+    font-size: 22px;
+    font-weight: 700;
+    color: #F1C40F;
 }
 
 .email-body {
-    font-size: 14px;
-    line-height: 1.6;
-    color: #333;
-    margin-bottom: 20px;
-    white-space: pre-wrap;
+    font-size: 15px;
+    line-height: 1.8;
+    color: #fff;
+    margin-bottom: 24px;
+    #ffffff-space: pre-wrap;
     word-wrap: break-word;
 }
 
 /* Attachments */
 
 .attachments-section {
-    margin-top: 20px;
+    margin-top: 24px;
     padding-top: 20px;
-    border-top: 1px solid #ecf0f1;
+    border-top: 2px solid #4A90E2;
 }
 
 .attachments-section h4 {
     margin-bottom: 15px;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 15px;
+    font-weight: 700;
+    color: #F1C40F;
 }
 
 .attachments-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
+    gap: 12px;
 }
 
 .attachment-item {
-    padding: 10px;
-    background: #f8f9fa;
-    border: 1px solid #ecf0f1;
-    border-radius: 4px;
+    padding: 14px;
+    background: rgba(74, 144, 226, 0.2);
+    border: 2px solid #4A90E2;
+    border-radius: 6px;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s;
+    color: #ffffff;
 }
 
 .attachment-item:hover {
-    background: #ecf0f1;
-    border-color: #3498db;
+    background: rgba(241, 196, 15, 0.2);
+    border-color: #F1C40F;
 }
 
 .attachment-icon {
-    font-size: 32px;
-    margin-bottom: 8px;
+    font-size: 36px;
+    margin-bottom: 10px;
 }
 
 .attachment-name {
     font-size: 12px;
     word-break: break-word;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
+    font-weight: 600;
 }
 
 .attachment-size {
     font-size: 11px;
-    color: #7f8c8d;
+    color: #4A90E2;
 }
 
 .attachment-download-btn {
-    padding: 4px 8px;
-    margin-top: 8px;
-    background: #3498db;
-    color: white;
-    border: none;
-    border-radius: 3px;
+    padding: 6px 10px;
+    margin-top: 10px;
+    background: linear-gradient(135deg, #4A90E2, #2e5c99);
+    color: #ffffff;
+    border: 2px solid #F1C40F;
+    border-radius: 4px;
     font-size: 11px;
+    font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: all 0.3s;
 }
 
 .attachment-download-btn:hover {
-    background: #2980b9;
+    background: linear-gradient(135deg, #2e5c99, #4A90E2);
+    transform: scale(1.05);
 }
 
 /* =====================================================
@@ -565,7 +613,7 @@ body {
 }
 
 .modal-content {
-    background: white;
+    background: #ffffff;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     max-width: 600px;
@@ -597,7 +645,7 @@ body {
 
 .modal-header {
     padding: 20px;
-    border-bottom: 1px solid #ecf0f1;
+    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -606,20 +654,20 @@ body {
 .modal-header h3 {
     margin: 0;
     font-size: 18px;
-    color: #2c3e50;
+    color: #1a1a2e;
 }
 
 .btn-close {
     background: none;
     border: none;
     font-size: 28px;
-    color: #7f8c8d;
+    color: rgba(255, 255, 255, 0.6);
     cursor: pointer;
     transition: color 0.3s;
 }
 
 .btn-close:hover {
-    color: #2c3e50;
+    color: #1a1a2e;
 }
 
 .modal-body {
@@ -630,8 +678,8 @@ body {
 
 .modal-footer {
     padding: 15px 20px;
-    background: #f8f9fa;
-    border-top: 1px solid #ecf0f1;
+    background: rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(74, 144, 226, 0.2);
     display: flex;
     justify-content: flex-end;
     gap: 10px;
@@ -650,14 +698,14 @@ body {
     margin-bottom: 8px;
     font-weight: 600;
     font-size: 14px;
-    color: #2c3e50;
+    color: #1a1a2e;
 }
 
 .form-control {
     width: 100%;
     padding: 10px 12px;
-    background: white;
-    border: 1px solid #ddd;
+    background: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 4px;
     font-size: 14px;
     outline: none;
@@ -665,7 +713,7 @@ body {
 }
 
 .form-control:focus {
-    border-color: #3498db;
+    border-color: #4A90E2;
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
 }
 
@@ -688,14 +736,14 @@ body {
     align-items: center;
     gap: 6px;
     padding: 5px 10px;
-    background: #ecf0f1;
+    background: rgba(74, 144, 226, 0.2);
     border-radius: 16px;
     font-size: 13px;
 }
 
 .recipient-tag-remove {
     cursor: pointer;
-    color: #e74c3c;
+    color: #E74C3C;
     font-weight: bold;
 }
 
@@ -710,13 +758,13 @@ body {
     gap: 5px;
     margin-bottom: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #ecf0f1;
+    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
 }
 
 .toolbar-btn {
     padding: 6px 10px;
-    background: #f8f9fa;
-    border: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 3px;
     cursor: pointer;
     font-size: 13px;
@@ -724,19 +772,19 @@ body {
 }
 
 .toolbar-btn:hover {
-    background: #ecf0f1;
-    border-color: #3498db;
+    background: rgba(74, 144, 226, 0.2);
+    border-color: #4A90E2;
 }
 
 .toolbar-btn.active {
-    background: #3498db;
-    color: white;
-    border-color: #3498db;
+    background: #4A90E2;
+    color: #ffffff;
+    border-color: #4A90E2;
 }
 
 .toolbar-divider {
     width: 1px;
-    background: #ddd;
+    background: rgba(255, 255, 255, 0.2);
     margin: 0 5px;
 }
 
@@ -744,8 +792,8 @@ body {
 
 .upload-zone {
     padding: 30px;
-    background: #f8f9fa;
-    border: 2px dashed #3498db;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px dashed #4A90E2;
     border-radius: 4px;
     text-align: center;
     cursor: pointer;
@@ -753,12 +801,12 @@ body {
 }
 
 .upload-zone:hover {
-    background: #ecf0f1;
+    background: rgba(74, 144, 226, 0.2);
 }
 
 .upload-zone small {
     display: block;
-    color: #7f8c8d;
+    color: rgba(255, 255, 255, 0.6);
     margin-top: 5px;
 }
 
@@ -771,7 +819,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 8px 12px;
-    background: #ecf0f1;
+    background: rgba(74, 144, 226, 0.2);
     border-radius: 4px;
     margin-bottom: 8px;
     font-size: 13px;
@@ -792,13 +840,13 @@ body {
     flex: 1;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
+    #ffffff-space: nowrap;
 }
 
 .btn-remove-file {
     background: none;
     border: none;
-    color: #e74c3c;
+    color: #E74C3C;
     cursor: pointer;
     font-size: 16px;
     transition: color 0.3s;
@@ -823,26 +871,26 @@ body {
 }
 
 .btn-primary {
-    background: #3498db;
-    color: white;
+    background: #4A90E2;
+    color: #ffffff;
 }
 
 .btn-primary:hover {
-    background: #2980b9;
+    background: #2e5c99;
 }
 
 .btn-secondary {
-    background: #95a5a6;
-    color: white;
+    background: rgba(255, 255, 255, 0.7);
+    color: #ffffff;
 }
 
 .btn-secondary:hover {
-    background: #7f8c8d;
+    background: rgba(255, 255, 255, 0.6);
 }
 
 .btn-danger {
-    background: #e74c3c;
-    color: white;
+    background: #E74C3C;
+    color: #ffffff;
 }
 
 .btn-danger:hover {
@@ -857,7 +905,7 @@ body {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
-    border-bottom: 2px solid #ecf0f1;
+    border-bottom: 2px solid rgba(74, 144, 226, 0.2);
 }
 
 .tab-btn {
@@ -867,17 +915,17 @@ body {
     border-bottom: 3px solid transparent;
     cursor: pointer;
     font-size: 14px;
-    color: #7f8c8d;
+    color: rgba(255, 255, 255, 0.6);
     transition: all 0.3s;
 }
 
 .tab-btn:hover {
-    color: #2c3e50;
+    color: #1a1a2e;
 }
 
 .tab-btn.active {
-    color: #3498db;
-    border-bottom-color: #3498db;
+    color: #4A90E2;
+    border-bottom-color: #4A90E2;
 }
 
 .tab-content {
@@ -900,7 +948,7 @@ body {
     display: block;
     margin-bottom: 8px;
     font-weight: 500;
-    color: #2c3e50;
+    color: #1a1a2e;
 }
 
 .setting-item input[type="checkbox"] {
@@ -923,12 +971,12 @@ body {
 }
 
 .provider-section h4 {
-    color: #2c3e50;
+    color: #1a1a2e;
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 15px;
     padding-bottom: 10px;
-    border-bottom: 2px solid #ecf0f1;
+    border-bottom: 2px solid rgba(74, 144, 226, 0.2);
 }
 
 .provider-section .provider-card {
@@ -949,8 +997,8 @@ body {
 
 .provider-card {
     padding: 20px;
-    background: #f8f9fa;
-    border: 2px solid #ecf0f1;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(74, 144, 226, 0.2);
     border-radius: 8px;
     text-align: center;
     transition: all 0.3s;
@@ -959,8 +1007,8 @@ body {
 }
 
 .provider-card:hover {
-    border-color: #3498db;
-    background: #ecf0f1;
+    border-color: #4A90E2;
+    background: rgba(74, 144, 226, 0.2);
     transform: translateY(-2px);
 }
 
@@ -972,16 +1020,16 @@ body {
 .provider-name {
     font-size: 13px;
     font-weight: 600;
-    color: #2c3e50;
+    color: #1a1a2e;
     margin-bottom: 10px;
-    white-space: pre-line;
+    #ffffff-space: pre-line;
 }
 
 .btn-connect {
     display: inline-block;
     padding: 8px 16px;
-    background: #3498db;
-    color: white;
+    background: #4A90E2;
+    color: #ffffff;
     border: none;
     border-radius: 4px;
     font-size: 12px;
@@ -991,7 +1039,7 @@ body {
 }
 
 .btn-connect:hover {
-    background: #2980b9;
+    background: #2e5c99;
     transform: scale(1.05);
 }
 
@@ -1015,7 +1063,7 @@ body {
 }
 
 .toast {
-    background: white;
+    background: #ffffff;
     padding: 15px 20px;
     border-radius: 4px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -1042,15 +1090,15 @@ body {
 }
 
 .toast.error {
-    border-left: 4px solid #e74c3c;
+    border-left: 4px solid #E74C3C;
 }
 
 .toast.info {
-    border-left: 4px solid #3498db;
+    border-left: 4px solid #4A90E2;
 }
 
 .toast.warning {
-    border-left: 4px solid #f39c12;
+    border-left: 4px solid #F39C12;
 }
 
 .toast-icon {
@@ -1060,14 +1108,14 @@ body {
 .toast-message {
     flex: 1;
     font-size: 14px;
-    color: #333;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .toast-close {
     background: none;
     border: none;
     font-size: 18px;
-    color: #7f8c8d;
+    color: rgba(255, 255, 255, 0.6);
     cursor: pointer;
 }
 
@@ -1077,7 +1125,7 @@ body {
 
 .sync-status-item {
     padding: 12px;
-    background: #f8f9fa;
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 4px;
     margin-bottom: 10px;
 }
@@ -1088,26 +1136,26 @@ body {
     align-items: center;
     margin-bottom: 8px;
     font-weight: 600;
-    color: #2c3e50;
+    color: #1a1a2e;
 }
 
 .sync-status-bar {
     width: 100%;
     height: 20px;
-    background: #ecf0f1;
+    background: rgba(74, 144, 226, 0.2);
     border-radius: 10px;
     overflow: hidden;
 }
 
 .sync-status-progress {
     height: 100%;
-    background: linear-gradient(90deg, #3498db, #2ecc71);
+    background: linear-gradient(90deg, #4A90E2, #2ecc71);
     transition: width 0.3s ease;
 }
 
 .sync-status-text {
     font-size: 12px;
-    color: #7f8c8d;
+    color: rgba(255, 255, 255, 0.6);
     margin-top: 5px;
 }
 
@@ -1201,7 +1249,7 @@ body {
     width: 16px;
     height: 16px;
     border: 2px solid #f3f3f3;
-    border-top: 2px solid #3498db;
+    border-top: 2px solid #4A90E2;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
@@ -1214,7 +1262,7 @@ body {
 .empty-state {
     text-align: center;
     padding: 40px;
-    color: #7f8c8d;
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .empty-state-icon {
@@ -1229,5 +1277,5 @@ body {
 
 .empty-state-subtext {
     font-size: 13px;
-    color: #95a5a6;
+    color: rgba(255, 255, 255, 0.7);
 }

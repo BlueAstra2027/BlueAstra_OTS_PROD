@@ -197,31 +197,12 @@ function startMeetingWithProvider(providerId) {
 async function handleStartMeeting(event) {
     event.preventDefault();
 
-    let title = document.getElementById('meetingTitle').value;
-    let provider = document.getElementById('meetingProvider').value;
-    let clientName = document.getElementById('clientName').value;
-    const clientEmail = document.getElementById('clientEmail').value;
-    let agenda = document.getElementById('meetingAgenda').value;
+    let title = document.getElementById('meetingTitle').value || 'Meeting';
+    let provider = document.getElementById('meetingProvider').value || 'zoom';
+    let clientName = document.getElementById('clientName').value || 'Client';
+    let clientEmail = document.getElementById('clientEmail').value || 'client@example.com';
+    let agenda = document.getElementById('meetingAgenda').value || 'Meeting discussion';
     const record = document.getElementById('recordMeeting').checked;
-
-    // Validate email (only mandatory field)
-    if (!clientEmail || clientEmail.trim() === '') {
-        showNotification('Client email is required', 'error');
-        return;
-    }
-
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(clientEmail.trim())) {
-        showNotification('Please enter a valid email address', 'error');
-        return;
-    }
-
-    // Set defaults for optional fields
-    if (!title) title = 'Meeting';
-    if (!provider) provider = 'zoom';
-    if (!clientName) clientName = 'Client';
-    if (!agenda) agenda = 'Meeting discussion';
 
     const providerInfo = videoProviders[provider];
 
@@ -268,6 +249,16 @@ async function handleStartMeeting(event) {
             agenda: agenda,
             senderName: user.name || 'Bloo CRM'
         });
+
+        // Open meeting in new window
+        setTimeout(() => {
+            window.open(meeting.meetingUrl, '_blank');
+            closeModal('startMeetingModal');
+            loadMeetingRoomFeatures();
+            loadRecentMeetings();
+        }, 1000);
+    }, 1500);
+}
 
         // Open meeting in new window
         setTimeout(() => {
