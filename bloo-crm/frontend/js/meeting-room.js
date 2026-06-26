@@ -197,13 +197,12 @@ function startMeetingWithProvider(providerId) {
 async function handleStartMeeting(event) {
     event.preventDefault();
 
-    const title = document.getElementById('meetingTitle').value;
-    const provider = document.getElementById('meetingProvider').value;
-    const clientName = document.getElementById('clientName').value;
+    let title = document.getElementById('meetingTitle').value;
+    let provider = document.getElementById('meetingProvider').value;
+    let clientName = document.getElementById('clientName').value;
     const clientEmail = document.getElementById('clientEmail').value;
-    const agenda = document.getElementById('meetingAgenda').value;
+    let agenda = document.getElementById('meetingAgenda').value;
     const record = document.getElementById('recordMeeting').checked;
-    const providerInfo = videoProviders[provider];
 
     // Validate email (only mandatory field)
     if (!clientEmail || clientEmail.trim() === '') {
@@ -218,13 +217,15 @@ async function handleStartMeeting(event) {
         return;
     }
 
-    // Check if other fields are provided for default values
+    // Set defaults for optional fields
     if (!title) title = 'Meeting';
     if (!provider) provider = 'zoom';
     if (!clientName) clientName = 'Client';
     if (!agenda) agenda = 'Meeting discussion';
 
-    showNotification(`Starting meeting with ${providerInfo?.name || provider}...`, 'info');
+    const providerInfo = videoProviders[provider];
+
+    showNotification(`Starting meeting with ${providerInfo?.name || 'Zoom'}...`, 'info');
 
     setTimeout(() => {
         const user = getCurrentUser();
