@@ -1,6 +1,6 @@
 /* =====================================================
-   EMAIL CLIENT STYLING - RED CRM THEME
-   Red (#E74C3C), Bright Blue (#4A90E2), Yellow (#F1C40F)
+   EMAIL CLIENT STYLING - WHITE WITH RED & AQUA BLUE
+   White Background, Red (#E74C3C), Aqua Blue (#00BCD4)
    ===================================================== */
 
 * {
@@ -11,8 +11,8 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-    color: #fff;
+    background: #ffffff;
+    color: #E74C3C;
 }
 
 /* =====================================================
@@ -22,7 +22,7 @@ body {
 .email-client-container {
     display: flex;
     height: 100vh;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background: #ffffff;
 }
 
 /* =====================================================
@@ -31,79 +31,76 @@ body {
 
 .email-sidebar {
     width: 280px;
-    background: linear-gradient(180deg, #E74C3C 0%, #c0392b 100%);
-    color: #ffffff;
+    background: #ffffff;
+    color: #E74C3C;
     display: flex;
     flex-direction: column;
-    border-right: 3px solid #F1C40F;
+    border-right: 3px solid #00BCD4;
     overflow-y: auto;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
 }
 
 .sidebar-header {
     padding: 20px 15px;
-    border-bottom: 2px solid #F1C40F;
-    background: linear-gradient(180deg, #E74C3C 0%, #c0392b 100%);
+    border-bottom: 2px solid #00BCD4;
 }
 
 .sidebar-header h2 {
     font-size: 22px;
     margin-bottom: 15px;
     font-weight: 700;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    color: #E74C3C;
 }
 
 .btn-compose {
     width: 100%;
     padding: 12px 15px;
-    background: linear-gradient(135deg, #4A90E2 0%, #2e5c99 100%);
-    color: #ffffff;
-    border: 2px solid #F1C40F;
+    background: #E74C3C;
+    color: white;
+    border: 2px solid #00BCD4;
     border-radius: 6px;
     cursor: pointer;
     font-size: 15px;
     font-weight: 600;
     transition: all 0.3s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .btn-compose:hover {
-    background: linear-gradient(135deg, #2e5c99 0%, #4A90E2 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    background: #c0392b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Account Switcher */
 
 .account-switcher {
     padding: 15px;
-    border-bottom: 2px solid #F1C40F;
+    border-bottom: 2px solid #00BCD4;
     display: flex;
     gap: 8px;
-    background: rgba(255, 255, 255, 0.05);
 }
 
 .account-dropdown {
     flex: 1;
     padding: 10px;
-    background: rgba(255, 255, 255, 0.15);
-    color: #ffffff;
-    border: 2px solid #F1C40F;
+    background: #ffffff;
+    color: #E74C3C;
+    border: 2px solid #00BCD4;
     border-radius: 6px;
     font-size: 13px;
     cursor: pointer;
 }
 
 .account-dropdown:hover {
-    background: rgba(255, 255, 255, 0.25);
+    background: #f5f5f5;
 }
 
 .btn-add-account {
     width: 40px;
     height: 40px;
-    background: linear-gradient(135deg, #4A90E2 0%, #2e5c99 100%);
-    color: #ffffff;
-    border: 2px solid #F1C40F;
+    background: #00BCD4;
+    color: white;
+    border: 2px solid #E74C3C;
     border-radius: 6px;
     cursor: pointer;
     font-size: 20px;
@@ -112,8 +109,8 @@ body {
 }
 
 .btn-add-account:hover {
-    transform: rotate(90deg) scale(1.1);
-    background: linear-gradient(135deg, #2e5c99 0%, #4A90E2 100%);
+    background: #0097A7;
+    transform: scale(1.05);
 }
 
 /* Folder List */
@@ -121,7 +118,7 @@ body {
 .folder-list {
     flex: 1;
     padding: 10px 0;
-    border-bottom: 2px solid #F1C40F;
+    border-bottom: 2px solid #00BCD4;
 }
 
 .folder-item {
@@ -131,17 +128,17 @@ body {
     cursor: pointer;
     transition: all 0.3s;
     border-left: 4px solid transparent;
-    color: #ffffff;
+    color: #E74C3C;
 }
 
 .folder-item:hover {
-    background: rgba(255, 255, 255, 0.15);
-    border-left-color: #F1C40F;
+    background: #f5f5f5;
+    border-left-color: #00BCD4;
 }
 
 .folder-item.active {
-    background: rgba(255, 255, 255, 0.2);
-    border-left-color: #F1C40F;
+    background: #f5f5f5;
+    border-left-color: #E74C3C;
     font-weight: 600;
 }
 
@@ -157,8 +154,8 @@ body {
 }
 
 .folder-count {
-    background: #F1C40F;
-    color: #E74C3C;
+    background: #E74C3C;
+    color: white;
     border-radius: 12px;
     padding: 3px 10px;
     font-size: 12px;
@@ -169,14 +166,14 @@ body {
 
 .labels-section {
     padding: 15px;
-    border-bottom: 2px solid #F1C40F;
+    border-bottom: 2px solid #00BCD4;
 }
 
 .labels-section h4 {
     font-size: 12px;
     text-transform: uppercase;
     margin-bottom: 10px;
-    color: #F1C40F;
+    color: #E74C3C;
     font-weight: 700;
 }
 
@@ -188,26 +185,26 @@ body {
     display: block;
     padding: 8px 12px;
     margin-bottom: 6px;
-    background: rgba(255, 255, 255, 0.1);
-    border-left: 4px solid #4A90E2;
+    background: #ffffff;
+    border-left: 4px solid #00BCD4;
     border-radius: 3px;
     font-size: 13px;
     cursor: pointer;
     transition: all 0.3s;
-    color: #ffffff;
+    color: #E74C3C;
+    border: 1px solid #00BCD4;
 }
 
 .label-tag:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-left-color: #F1C40F;
+    background: #f5f5f5;
 }
 
 .btn-new-label {
     width: 100%;
     padding: 8px;
     background: transparent;
-    color: #F1C40F;
-    border: 2px dashed #F1C40F;
+    color: #E74C3C;
+    border: 2px dashed #00BCD4;
     border-radius: 4px;
     font-size: 13px;
     font-weight: 600;
@@ -216,15 +213,15 @@ body {
 }
 
 .btn-new-label:hover {
-    background: #F1C40F;
-    color: #E74C3C;
+    background: #f5f5f5;
+    border-color: #E74C3C;
 }
 
 /* Sidebar Footer */
 
 .sidebar-footer {
     padding: 15px;
-    border-top: 2px solid #F1C40F;
+    border-top: 2px solid #00BCD4;
     display: flex;
     gap: 10px;
 }
@@ -233,9 +230,9 @@ body {
 .btn-sync {
     flex: 1;
     padding: 10px 12px;
-    background: rgba(255, 255, 255, 0.15);
-    color: #ffffff;
-    border: 2px solid #4A90E2;
+    background: #ffffff;
+    color: #E74C3C;
+    border: 2px solid #00BCD4;
     border-radius: 6px;
     cursor: pointer;
     font-size: 13px;
@@ -245,9 +242,9 @@ body {
 
 .btn-settings:hover,
 .btn-sync:hover {
-    background: #4A90E2;
-    border-color: #F1C40F;
-    color: #ffffff;
+    background: #E74C3C;
+    color: white;
+    border-color: #E74C3C;
 }
 
 /* =====================================================
@@ -258,19 +255,19 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background: #ffffff;
 }
 
 /* Top Bar */
 
 .email-topbar {
     padding: 16px 20px;
-    background: linear-gradient(180deg, rgba(79, 39, 245, 0.1), rgba(74, 144, 226, 0.05));
-    border-bottom: 2px solid #4A90E2;
+    background: #ffffff;
+    border-bottom: 2px solid #00BCD4;
     display: flex;
     align-items: center;
     gap: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .search-box {
@@ -280,23 +277,24 @@ body {
 .search-input {
     width: 100%;
     padding: 10px 16px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid #4A90E2;
+    background: #f5f5f5;
+    border: 2px solid #00BCD4;
     border-radius: 24px;
     font-size: 14px;
-    color: #ffffff;
+    color: #E74C3C;
     outline: none;
     transition: all 0.3s;
 }
 
 .search-input::placeholder {
-    color: rgba(255, 255, 255, 0.6);
+    color: #E74C3C;
+    opacity: 0.6;
 }
 
 .search-input:focus {
-    background: rgba(255, 255, 255, 0.15);
-    border-color: #F1C40F;
-    box-shadow: 0 0 10px rgba(241, 196, 15, 0.3);
+    background: #ffffff;
+    border-color: #E74C3C;
+    box-shadow: 0 0 8px rgba(231, 76, 60, 0.2);
 }
 
 .topbar-actions {
@@ -307,19 +305,19 @@ body {
 .btn-icon {
     width: 40px;
     height: 40px;
-    background: rgba(74, 144, 226, 0.3);
-    border: 2px solid #4A90E2;
+    background: #ffffff;
+    border: 2px solid #00BCD4;
     border-radius: 6px;
     cursor: pointer;
     font-size: 18px;
     transition: all 0.3s;
-    color: #ffffff;
+    color: #E74C3C;
 }
 
 .btn-icon:hover {
-    background: #4A90E2;
-    border-color: #F1C40F;
-    transform: scale(1.05);
+    background: #E74C3C;
+    color: white;
+    border-color: #E74C3C;
 }
 
 /* =====================================================
@@ -330,7 +328,7 @@ body {
     flex: 1;
     display: flex;
     overflow: hidden;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background: #ffffff;
 }
 
 /* Email List */
@@ -339,20 +337,20 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    border-right: 2px solid #4A90E2;
-    background: rgba(0, 0, 0, 0.3);
+    border-right: 2px solid #00BCD4;
+    background: #ffffff;
 }
 
 .email-list-header {
     display: grid;
     grid-template-columns: 40px 150px 1fr 150px;
     padding: 14px 0;
-    background: linear-gradient(180deg, rgba(74, 144, 226, 0.2), rgba(74, 144, 226, 0.1));
-    border-bottom: 2px solid #4A90E2;
+    background: #f5f5f5;
+    border-bottom: 2px solid #00BCD4;
     font-weight: 700;
     font-size: 12px;
     text-transform: uppercase;
-    color: #F1C40F;
+    color: #E74C3C;
 }
 
 .select-all {
@@ -364,7 +362,7 @@ body {
     padding: 0 15px;
     overflow: hidden;
     text-overflow: ellipsis;
-    #ffffff-space: nowrap;
+    white-space: nowrap;
 }
 
 .email-list {
@@ -376,26 +374,26 @@ body {
     display: grid;
     grid-template-columns: 40px 150px 1fr 150px;
     padding: 14px 0;
-    border-bottom: 1px solid rgba(74, 144, 226, 0.3);
+    border-bottom: 1px solid #f0f0f0;
     align-items: center;
     cursor: pointer;
     transition: all 0.3s;
-    color: #ffffff;
+    color: #E74C3C;
 }
 
 .email-item:hover {
-    background: rgba(74, 144, 226, 0.15);
-    border-left: 4px solid #F1C40F;
+    background: #f5f5f5;
+    border-left: 4px solid #00BCD4;
 }
 
 .email-item.active {
-    background: linear-gradient(90deg, rgba(231, 76, 60, 0.3), rgba(74, 144, 226, 0.2));
+    background: #f5f5f5;
     border-left: 4px solid #E74C3C;
 }
 
 .email-item.unread {
     font-weight: 700;
-    background: rgba(241, 196, 15, 0.1);
+    background: #ffffff;
 }
 
 .email-item-checkbox {
@@ -407,24 +405,24 @@ body {
     padding: 0 15px;
     overflow: hidden;
     text-overflow: ellipsis;
-    #ffffff-space: nowrap;
+    white-space: nowrap;
 }
 
 .email-item-subject {
     padding: 0 15px;
     overflow: hidden;
     text-overflow: ellipsis;
-    #ffffff-space: nowrap;
+    white-space: nowrap;
 }
 
 .email-item-date {
     padding: 0 15px;
     text-align: right;
     font-size: 12px;
-    color: #4A90E2;
+    color: #00BCD4;
     overflow: hidden;
     text-overflow: ellipsis;
-    #ffffff-space: nowrap;
+    white-space: nowrap;
 }
 
 /* Email Detail View */
@@ -433,13 +431,13 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    background: #ffffff;
 }
 
 .detail-header {
     padding: 18px 20px;
-    background: linear-gradient(180deg, rgba(74, 144, 226, 0.2), rgba(74, 144, 226, 0.1));
-    border-bottom: 2px solid #4A90E2;
+    background: #f5f5f5;
+    border-bottom: 2px solid #00BCD4;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -447,20 +445,20 @@ body {
 
 .btn-back {
     padding: 10px 14px;
-    background: rgba(74, 144, 226, 0.3);
-    border: 2px solid #4A90E2;
+    background: #ffffff;
+    border: 2px solid #00BCD4;
     border-radius: 6px;
     cursor: pointer;
     font-size: 14px;
-    color: #ffffff;
+    color: #E74C3C;
     font-weight: 600;
     transition: all 0.3s;
 }
 
 .btn-back:hover {
-    background: #4A90E2;
-    border-color: #F1C40F;
-    color: #ffffff;
+    background: #E74C3C;
+    color: white;
+    border-color: #E74C3C;
 }
 
 .detail-actions {
@@ -472,13 +470,13 @@ body {
     flex: 1;
     overflow-y: auto;
     padding: 24px;
-    color: #ffffff;
+    color: #E74C3C;
 }
 
 .email-headers {
     margin-bottom: 24px;
     padding-bottom: 20px;
-    border-bottom: 2px solid #4A90E2;
+    border-bottom: 2px solid #00BCD4;
 }
 
 .header-row {
@@ -490,26 +488,26 @@ body {
 
 .header-label {
     font-weight: 700;
-    color: #F1C40F;
+    color: #E74C3C;
 }
 
 .header-value {
-    color: #fff;
+    color: #00BCD4;
     word-break: break-word;
 }
 
 .header-subject-detail {
     font-size: 22px;
     font-weight: 700;
-    color: #F1C40F;
+    color: #E74C3C;
 }
 
 .email-body {
     font-size: 15px;
     line-height: 1.8;
-    color: #fff;
+    color: #333333;
     margin-bottom: 24px;
-    #ffffff-space: pre-wrap;
+    white-space: pre-wrap;
     word-wrap: break-word;
 }
 
@@ -518,14 +516,14 @@ body {
 .attachments-section {
     margin-top: 24px;
     padding-top: 20px;
-    border-top: 2px solid #4A90E2;
+    border-top: 2px solid #00BCD4;
 }
 
 .attachments-section h4 {
     margin-bottom: 15px;
     font-size: 15px;
     font-weight: 700;
-    color: #F1C40F;
+    color: #E74C3C;
 }
 
 .attachments-list {
@@ -536,18 +534,19 @@ body {
 
 .attachment-item {
     padding: 14px;
-    background: rgba(74, 144, 226, 0.2);
-    border: 2px solid #4A90E2;
+    background: #f5f5f5;
+    border: 2px solid #00BCD4;
     border-radius: 6px;
     text-align: center;
     cursor: pointer;
     transition: all 0.3s;
-    color: #ffffff;
+    color: #E74C3C;
 }
 
 .attachment-item:hover {
-    background: rgba(241, 196, 15, 0.2);
-    border-color: #F1C40F;
+    background: #E74C3C;
+    color: white;
+    border-color: #E74C3C;
 }
 
 .attachment-icon {
@@ -564,15 +563,15 @@ body {
 
 .attachment-size {
     font-size: 11px;
-    color: #4A90E2;
+    color: #00BCD4;
 }
 
 .attachment-download-btn {
     padding: 6px 10px;
     margin-top: 10px;
-    background: linear-gradient(135deg, #4A90E2, #2e5c99);
-    color: #ffffff;
-    border: 2px solid #F1C40F;
+    background: #00BCD4;
+    color: white;
+    border: 2px solid #E74C3C;
     border-radius: 4px;
     font-size: 11px;
     font-weight: 600;
@@ -581,8 +580,8 @@ body {
 }
 
 .attachment-download-btn:hover {
-    background: linear-gradient(135deg, #2e5c99, #4A90E2);
-    transform: scale(1.05);
+    background: #E74C3C;
+    border-color: #00BCD4;
 }
 
 /* =====================================================
@@ -596,7 +595,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
     z-index: 1000;
     align-items: center;
     justify-content: center;
@@ -615,7 +614,7 @@ body {
 .modal-content {
     background: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     max-width: 600px;
     width: 90%;
     max-height: 90vh;
@@ -645,7 +644,7 @@ body {
 
 .modal-header {
     padding: 20px;
-    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
+    border-bottom: 2px solid #00BCD4;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -654,20 +653,21 @@ body {
 .modal-header h3 {
     margin: 0;
     font-size: 18px;
-    color: #1a1a2e;
+    color: #E74C3C;
+    font-weight: 700;
 }
 
 .btn-close {
     background: none;
     border: none;
     font-size: 28px;
-    color: rgba(255, 255, 255, 0.6);
+    color: #E74C3C;
     cursor: pointer;
     transition: color 0.3s;
 }
 
 .btn-close:hover {
-    color: #1a1a2e;
+    color: #00BCD4;
 }
 
 .modal-body {
@@ -678,8 +678,8 @@ body {
 
 .modal-footer {
     padding: 15px 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-top: 1px solid rgba(74, 144, 226, 0.2);
+    background: #f5f5f5;
+    border-top: 2px solid #00BCD4;
     display: flex;
     justify-content: flex-end;
     gap: 10px;
@@ -698,23 +698,24 @@ body {
     margin-bottom: 8px;
     font-weight: 600;
     font-size: 14px;
-    color: #1a1a2e;
+    color: #E74C3C;
 }
 
 .form-control {
     width: 100%;
     padding: 10px 12px;
     background: #ffffff;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid #00BCD4;
     border-radius: 4px;
     font-size: 14px;
+    color: #E74C3C;
     outline: none;
     transition: all 0.3s;
 }
 
 .form-control:focus {
-    border-color: #4A90E2;
-    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+    border-color: #E74C3C;
+    box-shadow: 0 0 8px rgba(231, 76, 60, 0.2);
 }
 
 .compose-textarea {
@@ -736,19 +737,21 @@ body {
     align-items: center;
     gap: 6px;
     padding: 5px 10px;
-    background: rgba(74, 144, 226, 0.2);
+    background: #E74C3C;
+    color: white;
     border-radius: 16px;
     font-size: 13px;
+    border: 1px solid #00BCD4;
 }
 
 .recipient-tag-remove {
     cursor: pointer;
-    color: #E74C3C;
+    color: white;
     font-weight: bold;
 }
 
 .recipient-tag-remove:hover {
-    color: #c0392b;
+    color: #00BCD4;
 }
 
 /* Editor Toolbar */
@@ -758,33 +761,36 @@ body {
     gap: 5px;
     margin-bottom: 10px;
     padding-bottom: 10px;
-    border-bottom: 1px solid rgba(74, 144, 226, 0.2);
+    border-bottom: 2px solid #00BCD4;
 }
 
 .toolbar-btn {
     padding: 6px 10px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #ffffff;
+    border: 2px solid #00BCD4;
     border-radius: 3px;
     cursor: pointer;
     font-size: 13px;
+    color: #E74C3C;
     transition: all 0.3s;
+    font-weight: 600;
 }
 
 .toolbar-btn:hover {
-    background: rgba(74, 144, 226, 0.2);
-    border-color: #4A90E2;
+    background: #E74C3C;
+    color: white;
+    border-color: #E74C3C;
 }
 
 .toolbar-btn.active {
-    background: #4A90E2;
-    color: #ffffff;
-    border-color: #4A90E2;
+    background: #E74C3C;
+    color: white;
+    border-color: #E74C3C;
 }
 
 .toolbar-divider {
     width: 1px;
-    background: rgba(255, 255, 255, 0.2);
+    background: #00BCD4;
     margin: 0 5px;
 }
 
@@ -792,8 +798,8 @@ body {
 
 .upload-zone {
     padding: 30px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px dashed #4A90E2;
+    background: #f5f5f5;
+    border: 2px dashed #00BCD4;
     border-radius: 4px;
     text-align: center;
     cursor: pointer;
@@ -801,12 +807,13 @@ body {
 }
 
 .upload-zone:hover {
-    background: rgba(74, 144, 226, 0.2);
+    background: #ffffff;
+    border-color: #E74C3C;
 }
 
 .upload-zone small {
     display: block;
-    color: rgba(255, 255, 255, 0.6);
+    color: #E74C3C;
     margin-top: 5px;
 }
 
@@ -819,10 +826,12 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 8px 12px;
-    background: rgba(74, 144, 226, 0.2);
+    background: #f5f5f5;
     border-radius: 4px;
     margin-bottom: 8px;
     font-size: 13px;
+    border: 1px solid #00BCD4;
+    color: #E74C3C;
 }
 
 .uploaded-file-info {
@@ -840,7 +849,7 @@ body {
     flex: 1;
     overflow: hidden;
     text-overflow: ellipsis;
-    #ffffff-space: nowrap;
+    white-space: nowrap;
 }
 
 .btn-remove-file {
@@ -853,7 +862,7 @@ body {
 }
 
 .btn-remove-file:hover {
-    color: #c0392b;
+    color: #00BCD4;
 }
 
 /* =====================================================
@@ -862,39 +871,45 @@ body {
 
 .btn {
     padding: 10px 20px;
-    border: none;
+    border: 2px solid #00BCD4;
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 600;
     transition: all 0.3s;
 }
 
 .btn-primary {
-    background: #4A90E2;
-    color: #ffffff;
+    background: #E74C3C;
+    color: white;
+    border-color: #E74C3C;
 }
 
 .btn-primary:hover {
-    background: #2e5c99;
+    background: #c0392b;
+    border-color: #c0392b;
 }
 
 .btn-secondary {
-    background: rgba(255, 255, 255, 0.7);
-    color: #ffffff;
+    background: #00BCD4;
+    color: white;
+    border-color: #00BCD4;
 }
 
 .btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.6);
+    background: #0097A7;
+    border-color: #0097A7;
 }
 
 .btn-danger {
     background: #E74C3C;
-    color: #ffffff;
+    color: white;
+    border-color: #E74C3C;
 }
 
 .btn-danger:hover {
     background: #c0392b;
+    border-color: #c0392b;
 }
 
 /* =====================================================
@@ -905,7 +920,7 @@ body {
     display: flex;
     gap: 10px;
     margin-bottom: 20px;
-    border-bottom: 2px solid rgba(74, 144, 226, 0.2);
+    border-bottom: 2px solid #00BCD4;
 }
 
 .tab-btn {
@@ -915,17 +930,18 @@ body {
     border-bottom: 3px solid transparent;
     cursor: pointer;
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.6);
+    color: #E74C3C;
     transition: all 0.3s;
+    font-weight: 600;
 }
 
 .tab-btn:hover {
-    color: #1a1a2e;
+    color: #00BCD4;
 }
 
 .tab-btn.active {
-    color: #4A90E2;
-    border-bottom-color: #4A90E2;
+    color: #E74C3C;
+    border-bottom-color: #E74C3C;
 }
 
 .tab-content {
@@ -947,13 +963,14 @@ body {
 .setting-item label {
     display: block;
     margin-bottom: 8px;
-    font-weight: 500;
-    color: #1a1a2e;
+    font-weight: 600;
+    color: #E74C3C;
 }
 
 .setting-item input[type="checkbox"] {
     margin-right: 8px;
     cursor: pointer;
+    accent-color: #E74C3C;
 }
 
 /* =====================================================
@@ -971,12 +988,12 @@ body {
 }
 
 .provider-section h4 {
-    color: #1a1a2e;
-    font-size: 14px;
-    font-weight: 600;
+    color: #E74C3C;
+    font-size: 16px;
+    font-weight: 700;
     margin-bottom: 15px;
     padding-bottom: 10px;
-    border-bottom: 2px solid rgba(74, 144, 226, 0.2);
+    border-bottom: 2px solid #00BCD4;
 }
 
 .provider-section .provider-card {
@@ -997,8 +1014,8 @@ body {
 
 .provider-card {
     padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(74, 144, 226, 0.2);
+    background: #f5f5f5;
+    border: 2px solid #00BCD4;
     border-radius: 8px;
     text-align: center;
     transition: all 0.3s;
@@ -1007,8 +1024,8 @@ body {
 }
 
 .provider-card:hover {
-    border-color: #4A90E2;
-    background: rgba(74, 144, 226, 0.2);
+    border-color: #E74C3C;
+    background: #ffffff;
     transform: translateY(-2px);
 }
 
@@ -1020,17 +1037,17 @@ body {
 .provider-name {
     font-size: 13px;
     font-weight: 600;
-    color: #1a1a2e;
+    color: #E74C3C;
     margin-bottom: 10px;
-    #ffffff-space: pre-line;
+    white-space: pre-line;
 }
 
 .btn-connect {
     display: inline-block;
     padding: 8px 16px;
-    background: #4A90E2;
-    color: #ffffff;
-    border: none;
+    background: #E74C3C;
+    color: white;
+    border: 2px solid #00BCD4;
     border-radius: 4px;
     font-size: 12px;
     font-weight: 600;
@@ -1039,16 +1056,18 @@ body {
 }
 
 .btn-connect:hover {
-    background: #2e5c99;
+    background: #00BCD4;
+    color: #E74C3C;
+    border-color: #E74C3C;
     transform: scale(1.05);
 }
 
 .btn-connect.smtp-connect {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #E74C3C 0%, #00BCD4 100%);
 }
 
 .btn-connect.smtp-connect:hover {
-    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    background: linear-gradient(135deg, #00BCD4 0%, #E74C3C 100%);
 }
 
 /* =====================================================
@@ -1063,15 +1082,16 @@ body {
 }
 
 .toast {
-    background: #ffffff;
+    background: white;
     padding: 15px 20px;
     border-radius: 4px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     margin-bottom: 10px;
     display: flex;
     align-items: center;
     gap: 10px;
     animation: slideIn 0.3s ease;
+    border: 2px solid #00BCD4;
 }
 
 @keyframes slideIn {
@@ -1086,7 +1106,7 @@ body {
 }
 
 .toast.success {
-    border-left: 4px solid #27ae60;
+    border-left: 4px solid #E74C3C;
 }
 
 .toast.error {
@@ -1094,11 +1114,11 @@ body {
 }
 
 .toast.info {
-    border-left: 4px solid #4A90E2;
+    border-left: 4px solid #00BCD4;
 }
 
 .toast.warning {
-    border-left: 4px solid #F39C12;
+    border-left: 4px solid #E74C3C;
 }
 
 .toast-icon {
@@ -1108,14 +1128,14 @@ body {
 .toast-message {
     flex: 1;
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.9);
+    color: #E74C3C;
 }
 
 .toast-close {
     background: none;
     border: none;
     font-size: 18px;
-    color: rgba(255, 255, 255, 0.6);
+    color: #00BCD4;
     cursor: pointer;
 }
 
@@ -1125,9 +1145,10 @@ body {
 
 .sync-status-item {
     padding: 12px;
-    background: rgba(255, 255, 255, 0.1);
+    background: #f5f5f5;
     border-radius: 4px;
     margin-bottom: 10px;
+    border: 1px solid #00BCD4;
 }
 
 .sync-status-header {
@@ -1136,26 +1157,27 @@ body {
     align-items: center;
     margin-bottom: 8px;
     font-weight: 600;
-    color: #1a1a2e;
+    color: #E74C3C;
 }
 
 .sync-status-bar {
     width: 100%;
     height: 20px;
-    background: rgba(74, 144, 226, 0.2);
+    background: #f0f0f0;
     border-radius: 10px;
     overflow: hidden;
+    border: 1px solid #00BCD4;
 }
 
 .sync-status-progress {
     height: 100%;
-    background: linear-gradient(90deg, #4A90E2, #2ecc71);
+    background: linear-gradient(90deg, #E74C3C, #00BCD4);
     transition: width 0.3s ease;
 }
 
 .sync-status-text {
     font-size: 12px;
-    color: rgba(255, 255, 255, 0.6);
+    color: #E74C3C;
     margin-top: 5px;
 }
 
@@ -1249,7 +1271,7 @@ body {
     width: 16px;
     height: 16px;
     border: 2px solid #f3f3f3;
-    border-top: 2px solid #4A90E2;
+    border-top: 2px solid #E74C3C;
     border-radius: 50%;
     animation: spin 1s linear infinite;
 }
@@ -1262,7 +1284,7 @@ body {
 .empty-state {
     text-align: center;
     padding: 40px;
-    color: rgba(255, 255, 255, 0.6);
+    color: #E74C3C;
 }
 
 .empty-state-icon {
@@ -1273,9 +1295,11 @@ body {
 .empty-state-text {
     font-size: 16px;
     margin-bottom: 10px;
+    color: #E74C3C;
+    font-weight: 600;
 }
 
 .empty-state-subtext {
     font-size: 13px;
-    color: rgba(255, 255, 255, 0.7);
+    color: #00BCD4;
 }
