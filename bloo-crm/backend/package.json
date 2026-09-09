@@ -35,7 +35,7 @@
     "mongodb": "^7.3.0",
     "mongoose": "^7.0.0",
     "morgan": "^1.10.0",
-    "multer": "^2.2.0",
+    "multer": "^2.3.0",
     "node-fetch": "^2.7.0",
     "nodemailer": "^9.0.1",
     "paypal-rest-sdk": "^1.7.1",
